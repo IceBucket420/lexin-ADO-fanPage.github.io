@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ado Fanpage</title>
+        <!-- Favicon / Tab Logo -->
+        <link rel="icon" type="image/svg+xml" href="images/ado-1.svg" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Shippori+Mincho:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- SVG Grain Filter Overlay -->
+        <svg class="noise-overlay" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noiseFilter">
+                <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.95"
+                    numOctaves="4"
+                    stitchTiles="stitch"
+                />
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+        </svg>
+
+        <!-- Header -->
+        <header>
+            <div class="brand-logo-container">
+                <img src="images/ado-1.svg" alt="Ado Logo" class="brand-logo" />
+            </div>
+            <div class="brand-subtitle">FANPAGE</div>
+        </header>
+
+        <!-- Section 1: Intro Hero -->
+        <section id="hero">
+            <div class="hero-glow-orb orb-1"></div>
+            <div class="hero-glow-orb orb-2"></div>
+            <div class="hero-jp-watermark">アド</div>
+
+            <div class="hero-content">
+                <p class="hero-subtitle">THIS IS</p>
+                <h1 class="hero-title">ADO</h1>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Section 2: About -->
+        <section id="about">
+            <div class="about-container" id="aboutContainer">
+                <div class="about-text">
+                    <h2>ABOUT</h2>
+                    <p>
+                        Ado (<span class="jp-text">アド</span>) is a Japanese
+                        singer and former utaite who began posting vocal covers
+                        in 2017 at the age of 14, inspired by VOCALOID culture
+                        and iconic internet singers. After gaining traction with
+                        her feature on "Shikabaneeze" in 2020, she skyrocketed
+                        to global fame later that year with her mainstream debut
+                        single "Usseewa" under Virgin Music/Cloud Nine. Renowned
+                        for her incredible vocal range (spanning over four
+                        octaves), she effortlessly shifts between dark,
+                        aggressive growls, theatrical voice-acting tones, and
+                        crystal-clear falsettos. From her headlining work on the
+                        One Piece Film: Red soundtrack to signing with Geffen
+                        Records and embarking on world tours, Ado continues to
+                        dominate global charts while remaining deeply rooted in
+                        her utaite origins.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img
+                        src="images/profile.jpg"
+                        alt="Ado Profile Illustration"
+                    />
+                </div>
+
+                <div class="facts-card">
+                    <h3 class="facts-title">TRIVIA & FACTS</h3>
+                    <ul>
+                        <li>
+                            She recorded her early vocal covers and still
+                            prefers to record inside a soundproofed home closet.
+                        </li>
+                        <li>
+                            She chose "Ado" from the supporting role in
+                            traditional Japanese Kyogen theater, hoping her
+                            singing would serve as a supporting actor in her
+                            listeners' lives.
+                        </li>
+                        <li>
+                            Her signature blue rose originally meant
+                            "impossible," but changed to "dreams coming true" in
+                            2002—the year Ado was born.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Popular Songs Carousel -->
+        <section id="popular">
+            <!-- THIS IS THE PANNING ROSE BACKGROUND -->
+            <div class="rose-pattern-bg"></div>
+
+            <div class="popular-content-wrapper" id="popularWrapper">
+                <h2 class="popular-title">POPULAR</h2>
+
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Show -->
+                        <a
+                            href="https://www.youtube.com/watch?v=pgXpM4l_DAw"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="唱 (Show)"
+                            data-date="September 6, 2023"
+                            data-desc="Composed by Giga & TeddyLoid, Show is a chaotic, genre-bending Electro EDM carnival anthem created for Universal Studios Japan's Halloween Horror Nights."
+                        >
+                            <img src="images/show.png" alt="Show Cover" />
+                        </a>
+
+                        <!-- Odo -->
+                        <a
+                            href="https://www.youtube.com/watch?v=YnSW8ianMgY"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="踊 (ODO)"
+                            data-date="April 27, 2021"
+                            data-desc="Composed by Giga and TeddyLoid with lyrics by DECO*27, Odo is a high-energy electro-dance anthem blending aggressive EDM beats with Ado's versatile vocal acrobatics."
+                        >
+                            <img src="images/odo.jpg" alt="Odo Cover" />
+                        </a>
+
+                        <!-- Usseewa -->
+                        <a
+                            href="https://www.youtube.com/watch?v=Qp3b-RXtz4w"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="うっせぇわ (Usseewa)"
+                            data-date="October 23, 2020"
+                            data-desc="Produced by syudou, this rebellious major-label debut single became a viral cultural phenomenon, expressing youth frustration with society through fierce growls and raspy delivery."
+                        >
+                            <img src="images/usseewa.jpg" alt="Usseewa Cover" />
+                        </a>
+
+                        <!-- Readymade -->
+                        <a
+                            href="https://www.youtube.com/watch?v=jg09DX76o4c"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="レディメイド (Readymade)"
+                            data-date="December 24, 2020"
+                            data-desc="Written by Surii, Readymade fuses swing jazz with dark vocaloid pop, highlighting Ado's theatrical pitch shifts and playful yet cynical tone."
+                        >
+                            <img
+                                src="images/readymade.jpg"
+                                alt="Readymade Cover"
+                            />
+                        </a>
+
+                        <!-- Yoru no Pierrot -->
+                        <a
+                            href="https://www.youtube.com/watch?v=y6-00t2J-24"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="夜のピエロ (Yoru no Pierrot)"
+                            data-date="June 14, 2021"
+                            data-desc="Written and produced by biz, Yoru no Pierrot is a stylish synth-pop track capturing urban loneliness and night walks through glittering cityscapes."
+                        >
+                            <img
+                                src="images/yoru no.jpg"
+                                alt="Yoru no Pierrot Cover"
+                            />
+                        </a>
+
+                        <!-- Vivarium -->
+                        <a
+                            href="https://www.youtube.com/watch?v=YvYii6dluM8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="ビバリウム (Vivarium)"
+                            data-date="February 18, 2026"
+                            data-desc="Written and composed by Ado herself, Vivarium is a deeply personal math-rock track reflecting her vocal roots and solitary studio work."
+                        >
+                            <img
+                                src="images/vivarium.png"
+                                alt="Vivarium Cover"
+                            />
+                        </a>
+
+                        <!-- MIRROR -->
+                        <a
+                            href="https://www.youtube.com/watch?v=zsBBWBEZkFQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="carousel-card"
+                            data-title="MIRROR"
+                            data-date="May 31, 2024"
+                            data-desc="Produced by natori, MIRROR delivers a smooth funk-infused pop rhythm layered with moody basslines and Ado's sleek, soulful vocal performance."
+                        >
+                            <img src="images/mirror.png" alt="MIRROR Cover" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="song-info">
+                    <h3 class="song-title" id="songTitle">
+                        <span class="jp-text">唱</span> (Show)
+                    </h3>
+                    <p class="song-date" id="songDate">September 6, 2023</p>
+                    <p class="song-desc" id="songDesc">
+                        Composed by Giga & TeddyLoid, Show is a chaotic,
+                        genre-bending Electro EDM carnival anthem created for
+                        Universal Studios Japan's Halloween Horror Nights.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Live Performances Events -->
+        <section id="events">
+            <div class="events-bg-glow glow-top-left"></div>
+            <div class="events-bg-glow glow-bottom-right"></div>
+            <div class="events-stage-light"></div>
+
+            <div class="events-wrapper" id="eventsWrapper">
+                <div class="events-left">
+                    <div class="events-title-box">
+                        <h2>LIVE PERFORMANCES</h2>
+                        <p>SELECT A CLIP OF A CONCERT TO WATCH</p>
+                    </div>
+
+                    <div class="events-scroll-container">
+                        <!-- Performance 1 -->
+                        <div
+                            class="event-card active"
+                            data-video="https://www.youtube.com/embed/Igr6jQJEoNs?autoplay=1&mute=1"
+                            data-title="New Genesis (新時代) - Live Clip"
+                            data-date="Live Showcase"
+                            data-desc="Experience Ado's powerful live vocal performance of 'New Genesis', featuring electrification and high-octane stage energy."
+                        >
+                            <div class="event-name">New Genesis (新時代)</div>
+                            <div class="event-date">Live Clip</div>
+                            <p class="event-desc">
+                                Experience Ado's powerful live vocal performance
+                                of 'New Genesis', featuring electrification and
+                                high-octane stage energy.
+                            </p>
+                        </div>
+
+                        <!-- Performance 2 -->
+                        <div
+                            class="event-card"
+                            data-video="https://www.youtube.com/embed/prIfzzEGEcw?autoplay=1&mute=1"
+                            data-title="Backlight (逆光) - Live Clip"
+                            data-date="Live Showcase"
+                            data-desc="An aggressive rock live clip showcasing Ado's signature raspy growls and energetic stage silhouette presence."
+                        >
+                            <div class="event-name">Backlight (逆光)</div>
+                            <div class="event-date">Live Clip</div>
+                            <p class="event-desc">
+                                An aggressive rock live clip showcasing Ado's
+                                signature raspy growls and energetic stage
+                                silhouette presence.
+                            </p>
+                        </div>
+
+                        <!-- Performance 3 -->
+                        <div
+                            class="event-card"
+                            data-video="https://www.youtube.com/embed/khplMpm4ctc?autoplay=1&mute=1"
+                            data-title="Usseewa (うっせぇわ) - Live Clip"
+                            data-date="Live Showcase"
+                            data-desc="A thrilling live performance of her breakout debut track that catapulted her into international stardom."
+                        >
+                            <div class="event-name">Usseewa (うっせぇわ)</div>
+                            <div class="event-date">Live Clip</div>
+                            <p class="event-desc">
+                                A thrilling live performance of her breakout
+                                debut track that catapulted her into
+                                international stardom.
+                            </p>
+                        </div>
+
+                        <!-- Performance 4 -->
+                        <div
+                            class="event-card"
+                            data-video="https://www.youtube.com/embed/bVdCJluq0RE?autoplay=1&mute=1"
+                            data-title="Odo (踊) - Live Clip"
+                            data-date="Live Showcase"
+                            data-desc="Dynamic live electronic production accompanied by Ado's soaring vocal runs and intense crowd energy."
+                        >
+                            <div class="event-name">Odo (踊)</div>
+                            <div class="event-date">Live Clip</div>
+                            <p class="event-desc">
+                                Dynamic live electronic production accompanied
+                                by Ado's soaring vocal runs and intense crowd
+                                energy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="events-right">
+                    <div class="video-container">
+                        <iframe
+                            id="eventIframe"
+                            src="https://www.youtube.com/embed/Igr6jQJEoNs?autoplay=1&mute=1"
+                            title="Ado Live Performance Video"
+                            allow="
+                                accelerometer;
+                                autoplay;
+                                clipboard-write;
+                                encrypted-media;
+                                gyroscope;
+                                picture-in-picture;
+                                web-share;
+                            "
+                            allowfullscreen
+                        >
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">CONNECT WITH ADO</p>
+                <div class="social-links">
+                    <a
+                        href="https://www.youtube.com/c/Ado1024"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >YouTube</a
+                    >
+                    <a
+                        href="https://twitter.com/ado1024imokenp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >X / Twitter</a
+                    >
+                    <a
+                        href="https://open.spotify.com/artist/6mEQK9m2krA3R1L33C3A35"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Spotify</a
+                    >
+                    <a
+                        href="https://www.tiktok.com/@ado1024imokenp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >TikTok</a
+                    >
+                    <a
+                        href="https://www.instagram.com/ado1024imokenp/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Instagram</a
+                    >
+                </div>
+                <p class="copyright">
+                    &copy; Ado Fanpage Design. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
