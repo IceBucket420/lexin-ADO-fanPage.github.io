@@ -1,4 +1,5 @@
 # ADO FAN PAGE
+
 # Ado Fanpage — Interactive Web Application
 
 An interactive fanpage dedicated to the Japanese singer **Ado**, developed as a small assignment for the **Web Application Development 2 (WAD2)** module at **Singapore Management University (SMU)**.
@@ -11,11 +12,11 @@ This web project showcases dynamic layout design, CSS animations, and interactiv
 
 ### Key Features
 
-* **Hero Section**: Custom noise overlay filter, glowing orb animations, and Japanese typographic watermarks.
-* **Interactive Song Carousel**: Browse popular singles (`Show`, `Usseewa`, `Odo`, etc.) with dynamically updating song details.
-* **Continuous CSS Background Animation**: A custom panning blue rose pattern background (`.rose-pattern-bg`) running seamless infinite keyframe movement.
-* **Live Performance Video Switcher**: Responsive grid layout that switches embedded YouTube concert clips dynamically on click.
-* **Custom Aesthetic**: Grain overlays, custom web fonts (`Cinzel`, `Montserrat`, `Shippori Mincho`), dark atmospheric lighting effects, and hover transitions.
+- **Hero Section**: Custom noise overlay filter, glowing orb animations, and Japanese typographic watermarks.
+- **Interactive Song Carousel**: Browse popular singles (`Show`, `Usseewa`, `Odo`, etc.) with dynamically updating song details.
+- **Continuous CSS Background Animation**: A custom panning blue rose pattern background (`.rose-pattern-bg`) running seamless infinite keyframe movement.
+- **Live Performance Video Switcher**: Responsive grid layout that switches embedded YouTube concert clips dynamically on click.
+- **Custom Aesthetic**: Grain overlays, custom web fonts (`Cinzel`, `Montserrat`, `Shippori Mincho`), dark atmospheric lighting effects, and hover transitions.
 
 ---
 
@@ -43,9 +44,9 @@ This web project showcases dynamic layout design, CSS animations, and interactiv
 
 ## 🛠️ Tech Stack
 
-* **HTML5**: Semantic tags, embedded media, and SVG filters.
-* **CSS3**: Flexbox, CSS Grid, keyframes (`@keyframes`), custom properties, and background animation.
-* **JavaScript (ES6)**: DOM manipulation, event listeners, dynamic iframe routing, and dynamic data binding (`data-*` attributes).
+- **HTML5**: Semantic tags, embedded media, and SVG filters.
+- **CSS3**: Flexbox, CSS Grid, keyframes (`@keyframes`), custom properties, and background animation.
+- **JavaScript (ES6)**: DOM manipulation, event listeners, dynamic iframe routing, and dynamic data binding (`data-*` attributes).
 
 ---
 
@@ -57,4 +58,4 @@ This web project showcases dynamic layout design, CSS animations, and interactiv
 
 ---
 
-*Developed for SMU Web Application Development 2.*
+_Developed for SMU Web Application Development 2. All pictures in the webpage are used non-comercially and are not owned by me_
