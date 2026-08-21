@@ -620,6 +620,12 @@ section {
     color: #dbe4f0;
     margin-top: 8px;
 }
+/* Ensures Japanese characters inside titles, dates, and descriptions render in Shippori Mincho */
+.song-info .jp-text,
+.song-desc .jp-text,
+.song-title .jp-text {
+    font-family: var(--font-jp);
+}
 
 /* SECTION 4: Events (Live Performances) */
 #events {
