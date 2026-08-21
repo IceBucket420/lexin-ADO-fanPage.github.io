@@ -107,3 +107,22 @@ eventCards.forEach((card) => {
         }
     });
 });
+
+// Interactive Halftone Matrix Distortion for Live Performances
+const eventsSection = document.getElementById("events");
+if (eventsSection) {
+    eventsSection.addEventListener("mousemove", (e) => {
+        const rect = eventsSection.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Calculate percentage for dynamic rotation & scale shift
+        const moveX = (x / rect.width - 0.5) * 30;
+        const moveY = (y / rect.height - 0.5) * 30;
+
+        eventsSection.style.setProperty("--mouse-x", `${x}px`);
+        eventsSection.style.setProperty("--mouse-y", `${y}px`);
+        eventsSection.style.setProperty("--shift-x", `${moveX}px`);
+        eventsSection.style.setProperty("--shift-y", `${moveY}px`);
+    });
+}

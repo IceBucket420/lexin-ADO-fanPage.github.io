@@ -632,44 +632,53 @@ section {
     justify-content: center;
     align-items: center;
 }
-
-/* Dynamic Halftone Texture Overlay */
+/* Interactive Halftone Texture Overlay */
+/* Interactive Matrix Visualizer Halftone Overlay */
 .halftone-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Multi-layered dot array creating a dynamic halftone pattern */
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    /* Layered halftone matrix: high-contrast dots, cross-hatch accents, and angled offset dots */
     background-image:
         radial-gradient(
-            circle,
-            rgba(114, 150, 255, 0.25) 1.5px,
-            transparent 1.5px
-        ),
-        radial-gradient(
-            circle,
-            rgba(43, 82, 186, 0.15) 2.5px,
+            circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(114, 150, 255, 0.4) 2px,
             transparent 2.5px
         ),
         radial-gradient(
-            ellipse at center,
-            rgba(255, 255, 255, 0.08) 1px,
-            transparent 1px
+            circle,
+            rgba(43, 82, 186, 0.3) 1.5px,
+            transparent 1.5px
+        ),
+        repeating-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.03) 0,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px,
+            transparent 12px
         );
     background-size:
-        18px 18px,
-        36px 36px,
-        9px 9px;
+        24px 24px,
+        12px 12px,
+        100% 100%;
     background-position:
         0 0,
-        9px 9px,
-        4px 4px;
+        var(--shift-x, 0px) var(--shift-y, 0px),
+        0 0;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.65;
     mix-blend-mode: screen;
-    animation: halftonePulse 12s ease-in-out infinite alternate;
+    transform: translate(
+            calc(var(--shift-x, 0px) * -0.5),
+            calc(var(--shift-y, 0px) * -0.5)
+        )
+        rotate(1deg);
+    transition:
+        transform 0.15s ease-out,
+        background-position 0.15s ease-out;
 }
 
 @keyframes halftonePulse {
@@ -821,15 +830,32 @@ section {
 }
 
 /* Horizontal Card Selection Slider */
+/* Horizontal Card Selection Slider with Smooth Edge Fade */
 .events-scroll-container {
     display: flex;
     flex-direction: row;
     gap: 16px;
     width: 100%;
     overflow-x: auto;
-    padding-bottom: 12px;
+    padding: 12px 20px 16px 20px; /* Padding prevents active glows from clipping */
     scroll-snap-type: x mandatory;
     text-align: left;
+
+    /* Smooth gradient mask to fade out cards seamlessly on both edges */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 6%,
+        black 94%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 6%,
+        black 94%,
+        transparent 100%
+    );
 }
 
 .events-scroll-container::-webkit-scrollbar {
@@ -849,7 +875,8 @@ section {
 .event-card {
     min-width: 280px;
     max-width: 280px;
-    scroll-snap-align: start;
+    min-height: 160px; /* Standardizes card height across all titles */
+    scroll-snap-align: center; /* Snaps cards neatly in the view */
     background: var(--card-bg);
     border: 1px solid rgba(43, 82, 186, 0.2);
     border-radius: 12px;
@@ -858,9 +885,12 @@ section {
     transition:
         background 0.3s ease,
         border-color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        opacity 0.3s ease;
     backdrop-filter: blur(12px);
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .event-card:hover {
